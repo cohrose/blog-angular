@@ -8,8 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 export class IosSearchComponent implements OnInit {
   @Input() width: number;
   code = `<input 
-  (keyup.enter)='search()' 
-  (keyup.shift.enter)='search()' 
+  (keyup.enter)="search()" 
+  (keyup.shift.enter)="search()" 
   type="text"
 />`;
   constructor() {}
