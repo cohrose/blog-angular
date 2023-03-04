@@ -1,0 +1,77 @@
+<div class="card">
+  <h2>Centering</h2>
+  <div class="text">
+    There are many ways to center elements and text, below are a few of the most common ways divided up into two
+    categories: centering text, and centering a div.
+  </div>
+
+  <h3>Centering Text</h3>
+
+  <h4>Horizontally</h4>
+  <div class="text">If you're only looking to center text, the <code>text-align</code> property will do the trick.</div>
+  <pre><code [highlight]="textalign" [languages]="['css']" [lineNumbers]="width < 600 ? false : true"></code></pre>
+
+  <h4>Horizontally with FlexBox</h4>
+  <div class="text">
+    If you're using a flex component, <code>text-align</code> will not work. You will need to use the
+    <code>justify-content</code> property.
+  </div>
+  <pre><code [highlight]="justify" [languages]="['css']" [lineNumbers]="width < 600 ? false : true"></code></pre>
+
+  <h4>Horizontally & Vertically Using FlexBox</h4>
+  <div class="text">
+    If you're using a flex component, AND you have a defined height, you cannot use <code>justify-content</code> alone
+    if you want the text to be both vertically and horizontally centered. You will need to use the
+    <code>align-items</code> property as well.
+  </div>
+  <pre><code [highlight]="alignitems" [languages]="['css']" [lineNumbers]="width < 600 ? false : true"></code></pre>
+
+  <h3>Centering a Div</h3>
+
+  <div class="text">For the below examples, the HTML will look like this:</div>
+  <pre><code [highlight]="html" [languages]="['html']" [lineNumbers]="width < 600 ? false : true"></code></pre>
+
+  <h4>Horizontally</h4>
+  <div class="text">
+    To center a div horizontally, it's actually quite easy. Simply set the width, and set the margin to
+    <code>auto</code>.
+  </div>
+  <pre><code [highlight]="margin" [languages]="['css']" [lineNumbers]="width < 600 ? false : true"></code></pre>
+
+  <h4>Vertically</h4>
+  <div class="text">In order to center a div vertically, you'll need to do a little more work.</div>
+  <div class="text">
+    First, you want to make sure the "parent" componenet to what you're centering has the position property set to
+    <code>relative</code>.
+  </div>
+  <div class="text">
+    Second, you will set the "child" component to have a position property of <code>absolute</code>.
+  </div>
+  <div class="text">
+    Third, you will set the top property to <code>50%</code>, and set the transform property to
+    <code>translate(0, -50%)</code>. We have to set the transform property like this, otherwise the "top" of the div
+    will be at the center, and not the middle of the div like we want.
+  </div>
+  <pre><code [highlight]="vertically" [languages]="['css']" [lineNumbers]="width < 600 ? false : true"></code></pre>
+
+  <h4>Horizontally & Vertically</h4>
+  <div class="text">
+    To center a div both horizontally and vertically, you will want to copy all the code you used when centering
+    vertically, and add a few things.
+  </div>
+  <div class="text">
+    The main difference here, is that you're also going to set the left property to <code>50%</code>, and replace the 0
+    value in your translate property to <code>-50%</code>.
+  </div>
+
+  <pre><code [highlight]="verticalhorizontal" [languages]="['css']" [lineNumbers]="width < 600 ? false : true"></code></pre>
+
+  <h4>Horizontally & Vertically Using FlexBox</h4>
+  <div class="text">
+    To center a div both horizontally and vertically with FlexBox, it's actually quite similar to centering text using
+    Flex like we did above, by using <code>justify-content</code> and <code>align-items</code>.
+  </div>
+
+  <pre><code [highlight]="flexverticalhorizontal" [languages]="['css']" [lineNumbers]="width < 600 ? false : true"></code></pre>
+  <div class="date">Feb 8, 2023</div>
+</div>

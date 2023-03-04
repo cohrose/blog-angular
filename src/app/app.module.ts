@@ -20,6 +20,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { IosSearchComponent } from './components/cards/ios-search/ios-search.component';
 import { GridComponent } from './components/cards/grid/grid.component';
 import { MediaQueriesComponent } from './components/cards/media-queries/media-queries.component';
+import { CenteringComponent } from './components/cards/centering/centering.component';
 
 const MatModules = [
   FlexLayoutModule,
@@ -33,7 +34,7 @@ const MatModules = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, IosSearchComponent, GridComponent, MediaQueriesComponent],
+  declarations: [AppComponent, HomeComponent, IosSearchComponent, GridComponent, MediaQueriesComponent, CenteringComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
