@@ -23,6 +23,7 @@ import { MediaQueriesComponent } from './components/cards/media-queries/media-qu
 import { CenteringComponent } from './components/cards/centering/centering.component';
 import { ZipComponent } from './components/cards/zip/zip.component';
 import { GridDirectionComponent } from './components/cards/grid-direction/grid-direction.component';
+import { TinyMceComponent } from './components/cards/tiny-mce/tiny-mce.component';
 
 const MatModules = [
   FlexLayoutModule,
@@ -36,7 +37,17 @@ const MatModules = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, IosSearchComponent, GridComponent, MediaQueriesComponent, CenteringComponent, ZipComponent, GridDirectionComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    IosSearchComponent,
+    GridComponent,
+    MediaQueriesComponent,
+    CenteringComponent,
+    ZipComponent,
+    GridDirectionComponent,
+    TinyMceComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -14,35 +14,38 @@ export class GridComponent implements OnInit {
 </div>`;
   csscode = `/* default */
 .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
 }
 
 /* large devices */
 @media screen and (max-width: 1279px) {
-    .grid {
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 20px;
-    }
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
 }
 
 /* medium devices */
 @media screen and (max-width: 959px) {
-    .grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 15px;
-    }
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
 }
 
 /* small devices */
 @media screen and (max-width: 599px) {
-    .grid {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
 }
 `;
+
+  csscode2 = `grid-template-columns: repeat(3, minmax(0, 1fr));`;
+
   constructor() {}
 
   ngOnInit(): void {}
