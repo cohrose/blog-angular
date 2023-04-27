@@ -15,14 +15,14 @@ export class GridComponent implements OnInit {
   csscode = `/* default */
 .grid {
     display: grid;
-    grid-column-template: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 30px;
 }
 
 /* large devices */
 @media screen and (max-width: 1279px) {
     .grid {
-        grid-column-template: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 20px;
     }
 }
@@ -30,7 +30,7 @@ export class GridComponent implements OnInit {
 /* medium devices */
 @media screen and (max-width: 959px) {
     .grid {
-        grid-column-template: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 15px;
     }
 }
@@ -38,7 +38,7 @@ export class GridComponent implements OnInit {
 /* small devices */
 @media screen and (max-width: 599px) {
     .grid {
-        grid-column-template: 1fr;
+        grid-template-columns: 1fr;
         gap: 10px;
     }
 }
