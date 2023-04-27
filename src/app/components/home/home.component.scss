@@ -1,3 +1,53 @@
 h1 {
   margin-bottom: 40px;
 }
+
+.sidebar-container {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  min-height: 100vh;
+  .left {
+    background: var(--light-gray);
+    button {
+      cursor: pointer;
+      width: 100%;
+      background: unset;
+      color: #fff;
+      border: none;
+      padding: 5px;
+      &:hover {
+        background: var(--gray);
+      }
+      &.active {
+        background: var(--gray);
+      }
+      &.all {
+        margin: 30px 0;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.grid.no-grid {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.right {
+  margin: 50px 20px;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .left {
+    display: none;
+  }
+  .sidebar-container {
+    grid-template-columns: 1fr;
+  }
+}
